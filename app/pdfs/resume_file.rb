@@ -35,9 +35,9 @@ class ResumeFile < Prawn::Document
     move_down 20
     text "Experience", size: 14, style: :bold 
     #@student.experience.each do |experience|
-    text "(experience.company_name), (experience.job_title) | (experience.start_date) - (experience.end_date)",
+    text "{experience.company_name}, {experience.job_title} | {experience.start_date} - {experience.end_date}",
     size:12, style: :bold
-    text "(experience.details)",
+    text "{experience.details}",
     indent_paragraphs:60
     move_down 20 #this last movedown newlines for education
     #end
@@ -45,24 +45,25 @@ class ResumeFile < Prawn::Document
 
   def education
     text "Education", size: 14, style: :bold 
-    text "(education.university_name), (education.degree) | (education.start_date) - (education.end_date)",
+    # @student.education.each do |education|
+    text "{education.university_name}, {education.degree} | {education.start_date} - {education.end_date}",
     size:12, style: :bold
-    text "(education.details)",
+    text "{education.details}",
     indent_paragraphs:60
+    move_down 20
     #end
   end
 
   def skillz
     move_down 20
     text "Skills:", size:14, style: :bold
-    text "(@student.skills)", size:11
+    text "{@student.skills}", size:11
   end
 
   def capstone
-    stu = @student.capstone
-    move_down 20
     text "Capstone:", size:14, style: :bold
-    text "(stu.name)"
-    
+    text "{@student.capstone.name}"
+    text "{@student.capstone.description}"
+    text "{@student.capstone.url}"
   end
 end

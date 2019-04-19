@@ -17,7 +17,6 @@ class Api::StudentsController < ApplicationController
           disposition: "inline"
       end
     end
-    render 'show.json.jbuilder'
   end
 
   def create
