@@ -25,6 +25,13 @@ Gemfile.lock
 
 /public/assets
 .byebug_history
+.ruby-version
+Gemfile
+Gemfile.lock
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+Gemfile
+Gemfile.lock
+.ruby-version
