@@ -4,17 +4,65 @@ class ResumeFile < Prawn::Document
     @student = student
     student_name
     contact_info
-
+    profession
+    student_bio
+    skillz
+    experience
+    education
   end
 
   def student_name
-    text "#{@student.first_name} #{@student.last_name}", size: 25, style: :bold, align: :center
+    text "#{@student.first_name} #{@student.last_name}", size: 14, style: :bold, align: :center
   end
 
   def contact_info
     text "Email: #{@student.email} - Phone:#{@student.phone_number} - Linkedin: #{@student.linkedin} -  Twitter: #{@student.twitter} - Portfolio: #{@student.website} - Github: #{@student.github}",
-      align: :center
+      align: :center, size: 11
   end
 
+  def student_bio
+    move_down 3
+    text "#{@student.short_bio}", 
+    size: 11
+  end
 
+  def profession
+    move_down 10
+    text "GUNSLINGER", size:14, style: :bold, align: :center
+  end
+
+  def experience
+    move_down 20
+    text "Experience", size: 14, style: :bold 
+    #@student.experience.each do |experience|
+    text "(experience.company_name), (experience.job_title) | (experience.start_date) - (experience.end_date)",
+    size:12, style: :bold
+    text "(experience.details)",
+    indent_paragraphs:60
+    move_down 20 #this last movedown newlines for education
+    #end
+  end
+
+  def education
+    text "Education", size: 14, style: :bold 
+    text "(education.university_name), (education.degree) | (education.start_date) - (education.end_date)",
+    size:12, style: :bold
+    text "(education.details)",
+    indent_paragraphs:60
+    #end
+  end
+
+  def skillz
+    move_down 20
+    text "Skills:", size:14, style: :bold
+    text "(@student.skills)", size:11
+  end
+
+  def capstone
+    stu = @student.capstone
+    move_down 20
+    text "Capstone:", size:14, style: :bold
+    text "(stu.name)"
+    
+  end
 end
