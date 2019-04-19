@@ -32,4 +32,11 @@ class Api::ExperiencesController < ApplicationController
     @experience.save
     render 'show.json.jbuilder'
   end
+
+  def destroy
+    the_id = params[:id]
+    @experience = Experience.find_by(id: the_id)
+    @experience.destroy
+    render 'destroy.json.jbuilder'
+  end
 end
