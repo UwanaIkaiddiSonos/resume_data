@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   namespace :api do
     get '/experiences' => 'experiences#index'
     get '/experiences/:id' => 'experiences#show'
-    post '/students' => 'students#create'
+    post '/experiences' => 'experiences#create'
 
     get "/students" => "students#index"
     post "/students" => "students#create"
