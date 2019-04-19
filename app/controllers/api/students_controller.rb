@@ -47,9 +47,9 @@ class Api::StudentsController < ApplicationController
     render 'show.json.jbuilder'
   end
 
-  # def destroy
-  #   @student = Student.find_by(id: params[:id])
-  #   @student.destroy
-  #   render "destroy.json.jbuilder"
-  # end
+  def destroy
+    @student = Student.find_by(id: params[:id])
+    @student.destroy
+    render "destroy.json.jbuilder"
+  end
 end
