@@ -21,4 +21,15 @@ class Api::ExperiencesController < ApplicationController
     @experience.save
     render 'show.json.jbuilder'
   end
+
+  def update
+    @experience = Experience.find_by(id: params[:id])
+    @experience.start_date = params[:start_date] || @experience.start_date
+    @experience.end_date = params[:end_date] || @experience.end_date
+    @experience.job_title = params[:job_title] || @experience.job_title
+    @experience.company_name = params[:company_name] || @experience.company_name
+    @experience.details = params[:details] || @experience.details
+    @experience.save
+    render 'show.json.jbuilder'
+  end
 end
