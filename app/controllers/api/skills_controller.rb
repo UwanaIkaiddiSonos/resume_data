@@ -24,4 +24,11 @@ class Api::SkillsController < ApplicationController
     @skill.save
     render 'show.json.jbuilder'
   end
+
+  def destroy
+    the_id = params[:id]
+    @skill = Skill.find_by(id: the_id)
+    @skill.destroy
+    render 'destroy.json.jbuilder'
+  end
 end
