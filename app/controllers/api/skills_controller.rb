@@ -6,7 +6,7 @@ class Api::SkillsController < ApplicationController
 
   def show
     the_id = params[:id]
-    @experience = Skill.find_by(id: the_id)
+    @skill = Skill.find_by(id: the_id)
     render 'show.json.jbuilder'
   end
 
