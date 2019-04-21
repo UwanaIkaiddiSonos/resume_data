@@ -9,4 +9,12 @@ class Api::SkillsController < ApplicationController
     @experience = Skill.find_by(id: the_id)
     render 'show.json.jbuilder'
   end
+
+  def create
+    @skill = Skill.new(
+    skill_name: params[:skill_name]
+  )
+    @skill.save
+    render 'show.json.jbuilder'
+  end
 end

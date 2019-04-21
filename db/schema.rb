@@ -10,28 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2019_04_19_021135) do
+=======
+ActiveRecord::Schema.define(version: 2019_04_19_000649) do
+>>>>>>> e25a52fce25a8e01e0d98b426708205536306022
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "capstones", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.string "url"
-    t.string "screenshot"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "educations", force: :cascade do |t|
     t.string "start_date"
     t.string "end_date"
     t.string "degree"
     t.string "university_name"
-    t.text "details"
+  end
+
+  create_table "capstones", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "url"
+    t.string "screenshot"
+<<<<<<< HEAD
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+=======
+>>>>>>> e25a52fce25a8e01e0d98b426708205536306022
   end
 
   create_table "experiences", force: :cascade do |t|
@@ -39,6 +43,7 @@ ActiveRecord::Schema.define(version: 2019_04_19_021135) do
     t.string "end_date"
     t.string "job_title"
     t.string "company_name"
+
     t.text "details"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -65,5 +70,9 @@ ActiveRecord::Schema.define(version: 2019_04_19_021135) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+<<<<<<< HEAD
 
 end
+=======
+end
+>>>>>>> e25a52fce25a8e01e0d98b426708205536306022

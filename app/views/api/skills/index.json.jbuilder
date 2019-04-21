@@ -1,2 +1,4 @@
-json.id @skills.id
-json.skills @skills.skill_name
+json.array! @skills.each do |skill|
+  json.id skill.id
+  json.skill skill.skill_name
+end
