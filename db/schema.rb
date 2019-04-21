@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 2019_04_19_021135) do
     t.text "details"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
->>>>>>> 739c55e1655e4e3cdcc7a9817a773fe9a5b963e4
   end
 
   create_table "experiences", force: :cascade do |t|
