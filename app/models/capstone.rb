@@ -1,2 +1,3 @@
 class Capstone < ApplicationRecord
+  
 end
