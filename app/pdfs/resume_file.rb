@@ -13,7 +13,7 @@ class ResumeFile < Prawn::Document
   end
 
   def student_name
-      text "#{@student.first_name} #{@student.last_name}", size: 14, style: :bold, align: :center
+    text "#{@student.first_name} #{@student.last_name}", size: 14, style: :bold, align: :center
   end
 
   def contact_info

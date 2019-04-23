@@ -20,7 +20,8 @@ Education.create(
     end_date: "June 2018", 
     degree: "Bachelors of Arts Trigonometry", 
     university_name: "University of Trigonometry", 
-    details: "studied math and that of the such"
+    details: "studied math and that of the such",
+    student_id: 1
   })
 # Experience
 Experience.create(
@@ -29,7 +30,8 @@ Experience.create(
     end_date: "3/15/2014", 
     job_title: "Singer", 
     company_name: "American Idol", 
-    details: "Produced 10 albums and won 15 Grammys"
+    details: "Produced 10 albums and won 15 Grammys",
+    student_id: 1
   })
 
 Experience.create(
@@ -38,7 +40,8 @@ Experience.create(
     end_date: "9/01/2015", 
     job_title: "Astronaut", 
     company_name: "NASA", 
-    details: "Travelled to the moon and then went to Mars"
+    details: "Travelled to the moon and then went to Mars",
+    student_id: 1
   })
 
 Experience.create(
@@ -47,7 +50,8 @@ Experience.create(
     end_date: "6/17/2014", 
     job_title: "Software Developer", 
     company_name: "Amazon", 
-    details: "Worked within a team of 100 people to maintain and update Amazon's web interface"
+    details: "Worked within a team of 100 people to maintain and update Amazon's web interface",
+    student_id: 1
   })
 # Capstone
 Capstone.create!(
@@ -55,30 +59,33 @@ Capstone.create!(
     name: "Heal the World", 
     description: "Heal the world and make it a better place. For you and for me, and the entire human race.", 
     url: "https://en.wikipedia.org/wiki/Heal_the_World", 
-    screenshot: "https://m.media-amazon.com/images/M/MV5BMDI2ZTczZDUtZjkzZi00NWRkLWI4ZTUtNDMzMWYyYzU3ZTlmXkEyXkFqcGdeQXVyNzc1ODA1Mzc@._V1_UX182_CR0,0,182,268_AL_.jpg"
+    screenshot: "https://m.media-amazon.com/images/M/MV5BMDI2ZTczZDUtZjkzZi00NWRkLWI4ZTUtNDMzMWYyYzU3ZTlmXkEyXkFqcGdeQXVyNzc1ODA1Mzc@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    student_id: 1
   })
 # Skills
 Skill.create(
   {
-    skill_name: "CSS"
+    skill_name: "CSS",
+    student_id: 1
   })
 Skill.create(
   {
-    skill_name: "HTML"
+    skill_name: "HTML",
+    student_id: 1
   })
-Skill.create(
-  {
-    skill_name: "Bootstrap"
-  })
-Skill.create(
-  {
-    skill_name: "JavaScript"
-  })
-Skill.create(
-  {
-    skill_name: "Ruby"
-  })
-Skill.create(
-  {
-    skill_name: "Ruby on Rails"
-  })
+# Skill.create(
+#   {
+#     skill_name: "Bootstrap"
+#   })
+# Skill.create(
+#   {
+#     skill_name: "JavaScript"
+#   })
+# Skill.create(
+#   {
+#     skill_name: "Ruby"
+#   })
+# Skill.create(
+#   {
+#     skill_name: "Ruby on Rails"
+#   })
