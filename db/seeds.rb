@@ -50,7 +50,7 @@ Experience.create(
     details: "Worked within a team of 100 people to maintain and update Amazon's web interface"
   })
 # Capstone
-Capstone.create(
+Capstone.create!(
   {
     name: "Heal the World", 
     description: "Heal the world and make it a better place. For you and for me, and the entire human race.", 
