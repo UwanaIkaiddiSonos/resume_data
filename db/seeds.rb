@@ -7,7 +7,7 @@ Student.create(
     phone_number: "555-867-5309",
     short_bio: "Dog-lover. Yoga instructor. Passionate programmer.",
     linkedin: "https://www.linkedin.com/in/joshuasarna/",
-    twitter: "https://twitter.com/xkcdComic",
+    twitter: "xkcdComic",
     website: "https://xkcd.com/",
     resume: "https://www.themuse.com/advice/43-resume-tips-that-will-help-you-get-hired",
     github: "https://github.com/riceb53",
