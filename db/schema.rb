@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2019_04_23_001042) do
-
+ActiveRecord::Schema.define(version: 2019_04_23_001009) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,13 +24,6 @@ ActiveRecord::Schema.define(version: 2019_04_23_001042) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "education_students", force: :cascade do |t|
-    t.integer "education_id"
-    t.integer "student_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "educations", force: :cascade do |t|
     t.string "start_date"
     t.string "end_date"
@@ -41,13 +32,7 @@ ActiveRecord::Schema.define(version: 2019_04_23_001042) do
     t.text "details"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "experience_students", force: :cascade do |t|
-    t.integer "experience_id"
     t.integer "student_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "experiences", force: :cascade do |t|
@@ -88,4 +73,5 @@ ActiveRecord::Schema.define(version: 2019_04_23_001042) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
 end

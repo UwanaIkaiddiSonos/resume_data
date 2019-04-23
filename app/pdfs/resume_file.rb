@@ -13,9 +13,7 @@ class ResumeFile < Prawn::Document
   end
 
   def student_name
-    font("Courier") do
       text "#{@student.first_name} #{@student.last_name}", size: 14, style: :bold, align: :center
-    end
   end
 
   def contact_info
